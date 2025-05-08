@@ -2,4 +2,3 @@
 def add(a, b):
     r = a + b
     print("{}".format(r), end="")
-    return r

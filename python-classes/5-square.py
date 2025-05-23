@@ -11,8 +11,10 @@ class Square:
     property def size(self): to retrieve it
     property setter def size(self, value): to set it:
     Instantiation with optional size: def __init__(self, size=0):
-    Public instance method: def area(self): that returns the current square area
-    Public instance method: def my_print(self): that prints in stdout the square with the character #:
+    Public instance method: def area(self):
+    that returns the current square area
+    Public instance method: def my_print(self):
+    that prints in stdout the square with the character #:
     if size is equal to 0, print an empty line
     """
 
@@ -36,7 +38,7 @@ class Square:
         Returns the current square area
         """
         return self.__size ** 2
-    
+
     def my_print(self):
         """
          prints in stdout the square with the character #
@@ -44,6 +46,6 @@ class Square:
         if self.__size == 0:
             print("\n")
             return
-        
-        for i in range(self.__size):   
-            print("#" * self.__size)
+        else:
+            for i in range(self.__size):
+                print("#" * self.__size)

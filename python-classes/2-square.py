@@ -6,6 +6,8 @@ Write a class Square that defines a square by
 """
 
 class Square:
+
+
     """A square classwith size as a private attribute"""
     __size = 3
 

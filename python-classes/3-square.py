@@ -8,7 +8,7 @@ Write a class Square that defines a square by
 class Square:
 
     """A square class with size as a private attribute """
-    """ & public instance of area""""
+    """ & public instance of area"""
     __size = 3
 
     def __init__(self, size=0):

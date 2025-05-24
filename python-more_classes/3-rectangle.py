@@ -16,7 +16,7 @@ class Rectangle:
 
     Instantiation with optional width and height:
     def __init__(self, width=0, height=0):
-    
+
     Public instance method:
     def perimeter(self):
         that returns the rectangle perimeter:
@@ -64,7 +64,7 @@ class Rectangle:
             return 0
         return (self.__width + self.__height) * 2
 
-    def __str(self):
+    def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
         lines = []

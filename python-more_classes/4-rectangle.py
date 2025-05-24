@@ -72,5 +72,5 @@ class Rectangle:
             lines.append('#' * self.width)
         return "\n".join(lines)
 
-    def repr(self):
+    def __repr__(self):
         return "Rectangle({},{})".format(self.width, self.height)

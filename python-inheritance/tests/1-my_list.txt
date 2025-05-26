@@ -19,3 +19,22 @@
 >>> print(my_list)
 [7, 6, 8, 5, 6]
 
+>>> empty = MyList()
+>>> print(empty)
+[]
+>>> empty.print_sorted()
+[]
+
+>>> my_list = MyList()
+>>> my_list.append(-2)
+>>> my_list.append(1)
+>>> my_list.append(0)
+>>> my_list.append(-9)
+>>> print(my_list)
+[-2, 1, 0, -9]
+
+>>>my_list.print_sorted
+[-9, -2, 0, 1]
+
+... print(my_list)
+[-3, 1, 0. -9]

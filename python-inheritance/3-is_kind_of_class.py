@@ -18,7 +18,7 @@ def is_kind_of_class(obj, a_class):
     """
     res = isinstance(obj, a_class)
     if res is False:
-        return ()
+        return (res)
     
     else:
         return(obj)

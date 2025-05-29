@@ -14,7 +14,7 @@ class FlyMixin:
         """prints a string"""
         print("The creature flies!")
 
-class Dragon:
+class Dragon(SwimMixin, FlyMixin):
     """Dragon"""
     def roar(self):
         """print a string"""

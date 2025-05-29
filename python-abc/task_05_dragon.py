@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+"""mixins"""
+
+
+class SwimMixin:
+    """SwimMixin"""
+    def swim(self):
+        """prints a string"""
+        print(“The creature swims!”)
+
+
+class FlyMixin:
+    """FlyMixin"""
+    def fly(self):
+        """prints a string"""
+        print(“The creature flies!”)
+
+
+class Dragon:
+    """Dragon"""
+    def road(self):
+        """print a string"""
+        print("The dragon roars!")

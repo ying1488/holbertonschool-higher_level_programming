@@ -28,7 +28,7 @@ class VerboseList(list):
             print("Value does not exist, Nothing removed. Raising Value Error")
             raise ValueError() from exc
 
-    def pop(self, index = None):
+    def pop(self, index=None):
         if index is None:
             index = len(self) - 1
 

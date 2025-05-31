@@ -2,30 +2,48 @@
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """Shape"""
     @abstractmethod
-    
-    def area (self):
-    """area"""
-        return 
-    
+    def area(self):
+        """area"""
+        pass
+
     def perimeter(self):
-    """self"""
-        return
+        """perimeter"""
+        pass
+
 
 class Circle(Shape):
-    """
-    Dog - subclass of Animal
-    return sounds Bark
-    """
-    def sound(self):
-        return "Bark"
+    """ Circle """
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return self.radius**2**3.14
+
+    def perimeter(self):
+        return 2*self.radius*3.14
+
 
 class Rectangle(Shape):
+    """ Rectangle """
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return (self.width * self.height)
+
+    def perimeter(self):
+        return (2 * (self.width * self.height))
+
+
+def shape_info(shape):
     """
-    Dog - subclass of Animal
-    return sound str Meow
+    shape info - prints area and perimeter of a shape
+    args: shape
     """
-    def sound(self):
-        return "Meow"
+    print(f"area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")

@@ -46,5 +46,5 @@ def shape_info(shape):
     shape info - prints area and perimeter of a shape
     args: shape
     """
-    print(f"area: {shape.area():.1f}")
+    print(f"Area: {shape.area():.1f}")
     print(f"Perimeter: {shape.perimeter():.1f}")

@@ -9,7 +9,8 @@ class Shape(ABC):
     def area(self):
         """area"""
         pass
-
+    
+    @abstractmethod
     def perimeter(self):
         """perimeter"""
         pass
@@ -21,10 +22,10 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return self.radius*3.14
+        return (self.radius ** 2) * math.pi
 
     def perimeter(self):
-        return 2*self.radius*3.14
+        return (2 * self.radius * math.pi)
 
 
 class Rectangle(Shape):

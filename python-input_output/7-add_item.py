@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Load, add, save"""
+
 import sys
 import json
 
@@ -9,6 +10,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 args = sys.argv
 
 filename = "add_item.json"
+
 try:
     with open(filename, 'a+', encoding="utf-8") as f:
         items = json.load(f)

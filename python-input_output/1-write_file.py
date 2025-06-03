@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" write file"""
+
+
 def write_file(filename="", text=""):
     """write file"""
     with open("my_first_file.txt", "w", encoding="utf-8") as f:

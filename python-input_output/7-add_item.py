@@ -14,6 +14,7 @@ args = sys.argv
 filename = "add_item.json"
 
 try:
+    """Load, add, save"""
     with open(filename, 'a+', encoding="utf-8") as f:
         items = json.load(f)
 except FileNotFoundError:

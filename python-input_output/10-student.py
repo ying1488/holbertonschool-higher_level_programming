@@ -19,7 +19,7 @@ class Student:
             Otherwise, all attributes must be retrieved
         """
         if isinstance(attrs, list) and all(isinstance(i, str) for i in attrs):
-            return {key: self.__dict__[key] 
-                for key in attrs if key in self.__dict__}
+            return {key: self.__dict__[key]
+                    for key in attrs if key in self.__dict__}
         else:
             return self.__dict__

@@ -7,11 +7,13 @@ import json
 
 def serialize_and_save_to_file(data, filename):
     # Your code here to serialize and save data to the specified file
-    json_data = json.dumps(filename)
-    return (json_data)
+    with open(filename, 'w') as f:
+        json.dump(data, f)
 
 
 def load_and_deserialize(filename):
     # Your code here to load and deserialize data from the specified file
-    des_data = filename(**json.loads(filename))
-    return (des_data)
+    with open (filename, 'r') as f:
+        data = json.load(f)
+    return (data)
+

@@ -7,7 +7,7 @@ import json
 
 def serialize_and_save_to_file(data, filename):
     # Your code here to serialize and save data to the specified file
-    json_data = json.dumps(data, filename)
+    json_data = json.dumps(filename)
     print(json_data)
 
 

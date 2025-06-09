@@ -8,13 +8,13 @@ import json
 import csv
 
 def fetch_and_print_posts():
-    url = 'https://jsonplaceholder.typicode.com/posts'
+    url = 'https://jsonplaceholder.typicode.com/todos'
     res = requests.get(url)
     print("Status Code: {}".format(res.status_code))
     if res: 
         data = res.json()
-    for post in data:
-        print(post["title"])
+    for todo in data:
+        print(todo["title"])
 
 def fetch_and_save_posts():
-    return ("here")
+    print ("here")

@@ -13,6 +13,8 @@ class myHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         self.send_response(200)
+        self.send_header()
+        self.end_headers()
         res_message = "Hello, this is a simple API!"
         self.wfile.write(bytes(res_message, "utf-8"))
 

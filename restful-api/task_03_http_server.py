@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """Set up a basic web server using the http.server module.
 Handle different types of HTTP requests (GET, POST, etc.).
 Serve JSON data in response to specific endpoints.
@@ -55,6 +55,7 @@ class myHandler(BaseHTTPRequestHandler):
             res_message = "Endpoint not found"
             self.wfile.write(bytes(res_message, "utf-8"))
 
-server_add = ('localhost:', 8000)
+server_add = ('localhost', 8000)
 httpd = HTTPServer(server_add, myHandler)
+print("server up!")
 httpd.serve_forever()

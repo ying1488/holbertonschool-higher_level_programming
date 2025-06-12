@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Flask in action"""
-from http.server import BaseHTTPRequestHandler, HTTPServer
 from flask import Flask, jsonify, request, abort
-import json
+
 
 app = Flask(__name__)
 
@@ -29,15 +28,16 @@ def GetUsers(username):
     output["username"] = username
     return jsonify(output)
 
-@app.route("/add_user", METHOD=["POST"])
+@app.route("/add_user", methods=["POST"])
 def add_user():
     if request.get_json() is None:
         abort(400, "Not a JSON")
+
     req_data = request.get_json()
 
     if "username" not in req_data:
         return jsonify({"error": "Username is required"}), 400
-    
+
     users[req_data["username"]] = {
         "name": req_data["name"],
         "age": req_data["age"],
@@ -51,8 +51,6 @@ def add_user():
         "city": req_data["city"]
     }
     return jsonify({"message": "User added", "user": output}), 201
-
-
 
 if __name__ == "__main__":
     app.run()

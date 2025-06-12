@@ -21,7 +21,7 @@ def route():
     return "OK"
 
 @app.route("/users/<username>")
-def show_username(username):
+def GetUsers(username):
     if username not in users:
         return jsonify({"error": "User not found"}), 404
     

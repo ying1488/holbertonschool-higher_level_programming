@@ -2,7 +2,6 @@
 """Serializing and Deserializing with XML"""
 
 
-import json
 import xml.etree.ElementTree as ET
 
 

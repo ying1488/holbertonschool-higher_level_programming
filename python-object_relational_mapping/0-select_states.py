@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module is for listing all states using MySQLdb"""
 
+
 if __name__ == "__main__":
     import MySQLdb
     import sys
@@ -13,7 +14,7 @@ if __name__ == "__main__":
     )
 
     cursor = db_connection.cursor()
-    cursor.excute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
     states = cursor.fetchall()
 
     for state in states:

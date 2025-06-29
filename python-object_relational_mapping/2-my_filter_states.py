@@ -5,9 +5,9 @@ import sys
 
 # connecting to MySQL database
 if __name__ == "__main__":
-    username = sys.argv[1],
-    password = sys.argv[2],
-    database = sys.argv[3],
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
     search = sys.argv[4]
 
     db_connection = MySQLdb.connect(

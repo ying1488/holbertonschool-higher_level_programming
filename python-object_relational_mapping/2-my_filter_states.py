@@ -15,8 +15,8 @@ if __name__ == "__main__":
     name_search = sys.argv[4]
     cursor = db_connection.cursor()
     # Executing MySQL Queries in Python
-    format = "SELECT * FROM states WHERE name = BINARY %s" \ 
-    "ORDER BY id ASC"
+    format = "SELECT * FROM states WHERE name = BINARY %s;" \ 
+    "ORDER BY id ASC;"
     cursor.execute(format, (name_search))
     # Obtaining Query Results
     n_states = cursor.fetchall()

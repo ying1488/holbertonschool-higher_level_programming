@@ -12,6 +12,7 @@ if __name__ == "__main__":
         passwd=sys.argv[2],
         db=sys.argv[3]
     )
+
     name_search = sys.argv[4]
     cursor = db_connection.cursor()
     # Executing MySQL Queries in Python
@@ -24,6 +25,6 @@ if __name__ == "__main__":
     for n in n_states:
         print(n)
 
-# Clean Up
+    # Clean Up
     cursor.close()
     db_connection.close()

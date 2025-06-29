@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module is for listing all states using MySQLdb"""
+""" This module is for filter states by user inputusing MySQLdb"""
 
 #connecting to MySQL database
 if __name__ == "__main__":
@@ -15,9 +15,9 @@ if __name__ == "__main__":
     name_search = sys.argv[4]
     cursor = db_connection.cursor()
     # Executing MySQL Queries in Python
-    sql = "SELECT * FROM states WHERE name = BINARY %s " \
+    format = "SELECT * FROM states WHERE name = BINARY %s " \
         "ORDER BY id ASC"
-    cursor.execute(sql, (name_search))
+    cursor.execute(format, (name_search))
     # Obtaining Query Results
     n_states = cursor.fetchall()
 

@@ -20,8 +20,7 @@ if __name__ == "__main__":
     cursor = db_connection.cursor()
     # Executing MySQL Queries in Python
     q = (
-        "SELECT * FROM states WHERE BINARY "
-        "name = '{}' ORDER BY id ASC"
+        "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC"
     ).format(search)
     cursor.execute(q)
 
@@ -30,3 +29,6 @@ if __name__ == "__main__":
 
     for n in n_states:
         print(n)
+    
+    cursor.close()
+    db_connection.close()

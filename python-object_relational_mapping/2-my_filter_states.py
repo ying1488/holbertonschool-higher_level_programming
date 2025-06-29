@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" This module is for filter states by user inputusing MySQLdb"""
+"""This module is for filter states by user inputusing MySQLdb"""
 
-#connecting to MySQL database
+# connecting to MySQL database
 if __name__ == "__main__":
     import MySQLdb
     import sys

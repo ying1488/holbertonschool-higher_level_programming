@@ -5,22 +5,26 @@ import sys
 
 # connecting to MySQL database
 if __name__ == "__main__":
+    username = sys.argv[1],
+    password = sys.argv[2],
+    database = sys.argv[3],
+    search = sys.argv[4]
+
     db_connection = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3]
+        user=username,
+        passwd=password,
+        db=database,
     )
-
-    search = sys.argv[4]
     cursor = db_connection.cursor()
     # Executing MySQL Queries in Python
     q = (
-        "SELECT * FROM states WHERE BINARY" 
+        "SELECT * FROM states WHERE BINARY "
         "name = '{}' ORDER BY id ASC"
     ).format(search)
     cursor.execute(q)
+
     # Obtaining Query Results
     n_states = cursor.fetchall()
 

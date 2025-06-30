@@ -26,10 +26,8 @@ if __name__ == "__main__":
 
     cities = cursor.fetchall()
 
-    n_states = cursor.fetchall()
-
-    for n in n_states:
-        print(n)
+    for c in cities:
+        print(c)
 
     cursor.close()
     db_connection.close()

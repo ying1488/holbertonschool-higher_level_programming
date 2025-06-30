@@ -19,7 +19,7 @@ if __name__ == "__main__":
     )
 
     cursor = db_connection.cursor()
-    q = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY states.id ASC"
+    q = "SELECT * FROM states WHERE BINARY name = %s ORDER BY states.id ASC"
     cursor.execute(q, (name_search,))
 
     n_states = cursor.fetchall()

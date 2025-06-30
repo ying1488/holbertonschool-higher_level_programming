@@ -8,7 +8,6 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    name_search = sys.argv[4]
 
     db_connection = MySQLdb.connect(
         host="localhost",
@@ -19,8 +18,7 @@ if __name__ == "__main__":
     )
 
     cursor = db_connection.cursor()
-    q = "SELECT cities.id, cities.name, states.name FROM cities" \
-    " JOIN states ON cities.state_id = states.id " \
+    q = "SELECT * FROM cities JOIN states ON cities.state_id = states.id "
     "ORDER BY cities.id ASC"
     cursor.execute(q)
 

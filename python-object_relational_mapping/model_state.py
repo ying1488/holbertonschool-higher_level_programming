@@ -6,7 +6,9 @@ from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
+
 class State(Base):
+"""class"""
     __tablename__ = 'State'
 
     id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)

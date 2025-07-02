@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""First state model
-"""
+"""First state model"""
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 

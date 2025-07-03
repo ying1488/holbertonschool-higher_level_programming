@@ -15,7 +15,7 @@ if __name__ == "__main__":
         'mysql+mysqldb://{}:{}@localhost:3306/{}'.
         format(username, password, db)
         )
-    
+
     Session = sessionmaker(bind=engine)
     session = Session()
 

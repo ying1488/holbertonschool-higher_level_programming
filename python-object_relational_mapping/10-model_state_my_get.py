@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ This module is for printing the State object
-with the name passed as argument
+with the name passed as argument from the database hbtn_0e_6_usa
 """
-
 from sqlalchemy.orm import sessionmaker
 import sys
 from sqlalchemy import (create_engine)
@@ -22,10 +21,11 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    new_state = State(name="Louisiana")
-    session.add(new_state)
-    session.commit()
-    print(new_state.id)
+    states = session.query(State).filter(State.name == name_search).all()
+    if not states:
+        print("Not found")
+    else:
+        for state in states:
+            print(state.id)
 
     session.close()
-    

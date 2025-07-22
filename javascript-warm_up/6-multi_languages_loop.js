@@ -7,4 +7,3 @@ while (i < string.length) {
   console.log(string[i]);
   i++;
 }
-

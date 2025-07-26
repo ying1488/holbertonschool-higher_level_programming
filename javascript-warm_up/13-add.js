@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-export function add (a,b) {
+export function add (x, y) {
     sum = x + y;
     return sum;
 }

@@ -1,9 +1,10 @@
 #!/usr/bin/node
 
 const arg1 = process.argv.slice(2).map(Number);
+
 function getSecondLargest(array){
     const n = array.length;
-    //sort array in accending order
+    // sort array in accending order
     array.sort((a,b)=> a - b);
     // from second last element as the last is the largest
     for (let i = n - 2; i >=0; i--){

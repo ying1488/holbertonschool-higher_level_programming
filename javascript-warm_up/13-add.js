@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function add(x,y){
+function add(x, y){
     sum = x + y;
     return sum;
 }

@@ -32,8 +32,7 @@ def generate_invitations(template_content, attendees):
             if value == "" or value is None:
                 value = "N/A"
             template_copy = template_copy.replace(to_replace, value)
-        count = count + 1 
         f = open("output_" + str(count) + ".txt", "a")
         f.write(template_copy)
         f.close()
- 
+        count = count + 1 

@@ -14,6 +14,7 @@ class BaseGeometry:
         ...
     Exception: area() is not implemented
     """
+    
     def area(self):
         """
         function that calculates area
